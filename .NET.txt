@@ -1,0 +1,45 @@
+## APIS .NET ##
+
+Comandos:
+
+dotnet build
+dotnet test
+dotnet publish
+
+
+
+## DOTNET PUBLISH ##
+Este comando llama a MSBuild.
+
+
+## MSBuild ##
+MSBuild o MSBuild Engine es una plataforma para compilar aplicaciones, un motor. 
+Proporciona un esquema XML que controla cómo la plataforma de compilación procesa y compila el software.
+Visual Studio usa MSBuild (pero MSBuild es independiente de VS). 
+Al invicar msbuild.exe en un archivo de proyecto (csproj) o solución (sln) se puede compilar el software en un entorno en el que no está instalado VS.
+
+Vamos que sirve para compilar un programa que utilice VS sin necesidad de tener VS instalado.
+Diferentes archivos de proyecto de VS: .csproj, vbproj, .vcxproj...
+Todos estos archivs de proyecto contienen código XML de MSBuild que se ejecuta cuando se compila un proyecto con el IDE VS. 
+
+Cuándo invocar MSBuld para compilar un proyecto desde la línea de comandos en lugar de usar el IDE VS:
+-Cuando VS no está instalado
+-Cuando se desea modificar el sistema de compilación (preprocesar archivos antes de alcanzar el compilador, copiar los resultados de compilación a un lugar diferente, crear archivos comprimidos a partir de los resultados de la compilación o realizar un paso de procesamiento posterior).
+
+Para ejecutar MSBuild simplemente hay que pasarle un archivo de proyecto a MSBuild.exe y especificar las opciones (parámetros) del comando adecuados.
+
+
+Por ejemplo:
+Para compilar el archivo de proyecto Myproyecto.proj con la propiedad de Configuration en Debug, se usaría la siguiente línea:
+MSBuild.exe Myproyecto.proj -property:Configuration=Debug
+
+
+
+
+
+
+
+
+
+
+ 
