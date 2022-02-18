@@ -1,0 +1,11 @@
+
+#Definir una variable en Powershell:
+$nombreVariable = "estoseríaunstring"
+$nombreVariable2 = 9
+
+#Establecer una variable de entorno en powershell 
+$env:NOMBRE_VARIABLE
+
+
+Test-Variable
+Test-Command
